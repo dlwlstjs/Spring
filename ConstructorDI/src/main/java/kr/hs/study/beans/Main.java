@@ -23,7 +23,6 @@ public class Main {
         tb.prData();
         obj5.prData();
 
-
         ctx.close();
     }
 }
