@@ -9,13 +9,10 @@
 	                    http://www.springframework.org/schema/context/spring-context-5.0.2.xsd
 	                    http://www.springframework.org/schema/aop
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
-
-
-
-
-
-
-    <bean id="t" class="hs.kr.beans.TestBean1"/>
-    <bean id="t2" class="hs.kr.beans.TestBean1"/>
-    <bean id="t5" class="hs.kr.beans.TestBean5" init-method="init" destroy-method="destroy"/>
+<bean id="d" class="kr.hs.study.beans.DataBean1"/>
+    <bean id="t1" class="kr.hs.study.beans.TestBean1">
+        <property name="data1" value="22"/>
+        <property name="data2" value="22.22"/>
+        <property name="data3" ref="d"/>
+    </bean>
 </beans>

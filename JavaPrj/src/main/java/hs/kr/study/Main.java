@@ -2,6 +2,8 @@ package hs.kr.study;
 
 import hs.kr.study.beans.TestBean1;
 import hs.kr.study.beans.TestBean2;
+import hs.kr.study.beans.TestBean3;
+import hs.kr.study.beans.TestBean4;
 import hs.kr.study.config.BeanConfigClass;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -20,11 +22,20 @@ public class Main {
         //ClassPathXmlApplicationContext c = new ClassPathXmlApplicationContext("config.xml");
         //classpath(resourse)를 찾아서 xml을 읽어오고 객체를 생성하여 IoC contain에 넣는다.
 
-        TestBean1 obj2 = ctx.getBean("java1", TestBean1.class);
-        System.out.println(obj2);
+//        TestBean1 obj2 = ctx.getBean("java1", TestBean1.class);
+//        System.out.println(obj2);
+//
+//        TestBean2 obj3 = ctx.getBean("new", TestBean2.class);
+//        System.out.println(obj3);
+//
+//        TestBean3 obj4 = ctx.getBean("a3", TestBean3.class);
+//        System.out.println(obj3);
 
-        TestBean2 obj3 = ctx.getBean("new", TestBean2.class);
-        System.out.println(obj3);
+        TestBean4 obj5 = ctx.getBean(TestBean4.class);
+        System.out.println(obj5);
+
+//        TestBean4 obj6 = ctx.getBean("t4", TestBean4.class);
+//        System.out.println(obj6);
         ctx.close();
     }
 }

@@ -11,11 +11,10 @@
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
-
-
-
-
-    <bean id="t" class="hs.kr.beans.TestBean1"/>
-    <bean id="t2" class="hs.kr.beans.TestBean1"/>
-    <bean id="t5" class="hs.kr.beans.TestBean5" init-method="init" destroy-method="destroy"/>
+<bean id="d1" class="kr.hs.study.beans.DataBean1"/>
+<bean id="t1" class="kr.hs.study.beans.TestBean1">
+    <constructor-arg value="11" type="int"/>
+    <constructor-arg value="Marc11" type="String"/>
+    <constructor-arg ref="d1"/>
+</bean>
 </beans>

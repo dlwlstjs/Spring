@@ -1,6 +1,6 @@
 package kr.hs.study;
 
-import hs.kr.beans.TestBean1;
+import kr.hs.study.beans.TestBean1;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -8,10 +8,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("config.xml");
-        TestBean1 t1 = ctx.getBean("t", TestBean1.class);
-        TestBean1 t2 = ctx.getBean("t2", TestBean1.class);
-        System.out.println(t1);
-        System.out.println(t2);
+
+        TestBean1 obj1 = ctx.getBean("t1", TestBean1.class);
+
+        obj1.pr();
         ctx.close();
     }
 }
