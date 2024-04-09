@@ -1,7 +1,6 @@
 package kr.hs.study;
 
-import kr.hs.study.beans.TestBeans1;
-import kr.hs.study.beans.TestBeans2;
+import kr.hs.study.beans.TestBean1;
 import kr.hs.study.config.BeanConfigClass;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,8 +9,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(BeanConfigClass.class);
-        TestBeans2 obj = ctx.getBean("t2", TestBeans2.class);
-        System.out.println(obj);
+        TestBean1 t1 = ctx.getBean(TestBean1.class);
+        t1.pr();
         ctx.close();
     }
 }
