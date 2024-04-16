@@ -9,7 +9,14 @@
 	                    http://www.springframework.org/schema/context/spring-context-5.0.2.xsd
 	                    http://www.springframework.org/schema/aop
 	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="t1" class="kr.hs.study.beans.TestBean1"/><!--jointpoint가 있는 곳-->
+    <bean id="advisor1" class="kr.hs.study.advice.AdvisorClass"/><!--삽입될 advice가 있는 곳-->
 
-
+    <aop:config>
+        <aop:aspect ref="advisor1">
+            <aop:pointcut id="point" expression="execution(* method1())"/>
+            <aop:after-returning method="returningMethod" pointcut-ref="point" />
+        </aop:aspect>
+    </aop:config>
 
 </beans>
