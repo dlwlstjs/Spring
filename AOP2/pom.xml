@@ -40,13 +40,6 @@
             </exclusions>
             <scope>runtime</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-aop -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>5.1.0.RELEASE</version>
-        </dependency>
 
         <!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
         <!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
@@ -64,5 +57,7 @@
             <version>1.9.7</version>
             <scope>runtime</scope>
         </dependency>
+
+
     </dependencies>
 </project>
